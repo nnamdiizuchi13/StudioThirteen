@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Booking — Studio Thirteen</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Studio <span>Thirteen</span></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== CONTACT HERO / BACKDROP ===================== -->
+  <header class="contact-hero">
+    <div class="hero-bg" style="background-image: url('images/CONTACT.jpg');"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="contact-hero-content">
+
+      <!-- Intro + contact details -->
+      <div class="contact-intro">
+        <p class="hero-eyebrow">Get In Touch</p>
+        <h1 class="hero-title">Let's Make<br /><span class="accent">Something</span></h1>
+        <p class="hero-sub">
+          Tell us about your project and we'll confirm your session within 24 hours. Whether it's a full album, a single mix, or a weekly podcast, we want to hear about it.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-details-item">
+            <p class="contact-details-label">Email</p>
+            <a href="mailto:info@studiothirteen.com">info@studiothirteen.com</a>
+          </div>
+          <div class="contact-details-item">
+            <p class="contact-details-label">Phone</p>
+            <a href="tel:+16175550113">(617) 555-0113</a>
+          </div>
+          <div class="contact-details-item">
+            <p class="contact-details-label">Studio Address</p>
+            <p>13 Tremont Street<br />Boston, MA 02108</p>
+          </div>
+          <div class="contact-details-item">
+            <p class="contact-details-label">Studio Hours</p>
+            <p>Mon–Sat: 9:00 AM – 11:00 PM<br />Sun: 11:00 AM – 8:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact form card -->
+      <div class="contact-form-card">
+        <h2>Session Inquiry Form</h2>
+        <p class="form-sub">Fields marked <span class="req">*</span> are required. We'll never share your information.</p>
+
+        <form id="contact-form" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name <span class="req">*</span></label>
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="Jordan"
+                pattern="[A-Za-z' -]{2,40}"
+                title="Enter a first name using letters, spaces, apostrophes, or hyphens only (2–40 characters)."
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name <span class="req">*</span></label>
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Rivera"
+                pattern="[A-Za-z' -]{2,40}"
+                title="Enter a last name using letters, spaces, apostrophes, or hyphens only (2–40 characters)."
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email <span class="req">*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="jordan@example.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone <span class="req">*</span></label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="617-555-0113"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                title="Enter a phone number in the format 617-555-0113."
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City <span class="req">*</span></label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Boston"
+                pattern="[A-Za-z' -]{2,50}"
+                title="Enter a city name using letters, spaces, apostrophes, or hyphens only."
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="state">State <span class="req">*</span></label>
+              <select id="state" name="state" required>
+                <option value="" disabled selected>Select</option>
+                <option value="MA">Massachusetts</option>
+                <option value="RI">Rhode Island</option>
+                <option value="NH">New Hampshire</option>
+                <option value="CT">Connecticut</option>
+                <option value="ME">Maine</option>
+                <option value="VT">Vermont</option>
+                <option value="NY">New York</option>
+                <option value="OTHER">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="zip">Zip Code <span class="req">*</span></label>
+              <input
+                type="text"
+                id="zip"
+                name="zip"
+                placeholder="02108"
+                pattern="[0-9]{5}(-[0-9]{4})?"
+                title="Enter a 5-digit zip code, or ZIP+4 (e.g. 02108 or 02108-1234)."
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="service">Service Interested In <span class="req">*</span></label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="recording">Studio Recording Session</option>
+                <option value="mixing">Mixing &amp; Mastering</option>
+                <option value="vocal">Vocal &amp; Instrument Tracking</option>
+                <option value="podcast">Podcast Production</option>
+                <option value="live-band">Live Band Session</option>
+                <option value="other">Something Else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pref-date">Preferred Date</label>
+              <input type="date" id="pref-date" name="pref-date" />
+              <p class="form-hint">Optional — we'll do our best to accommodate.</p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="message">Project Details <span class="req">*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us about your project — genre, number of tracks, timeline, anything else we should know."
+                minlength="10"
+                maxlength="800"
+                required
+              ></textarea>
+              <p class="form-hint">
+                Minimum 10 characters.
+                <span id="message-count" style="float:right;">0 / 800</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="consent" name="consent" required />
+            <label for="consent">I agree to be contacted by Studio Thirteen regarding this inquiry. <span class="req">*</span></label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Inquiry</button>
+        </form>
+
+        <div class="form-success" id="form-success">
+          <div class="why-icon" style="text-align:center;">🎙</div>
+          <h3>Thanks for reaching out!</h3>
+          <p>Your inquiry has been received. A member of the Studio Thirteen team will follow up within 24 hours to confirm your session.</p>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="nav-logo">Studio <span style="color: var(--color-gold);">Thirteen</span></p>
+        <p>Professional recording, mixing, and mastering in Boston, MA. Serving artists, bands, podcasters, and creators since 2012.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="contact.html">Contact &amp; Booking</a></li>
+          <li><a href="support.html">Support Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Studio Recording</a></li>
+          <li><a href="services.html">Mixing &amp; Mastering</a></li>
+          <li><a href="services.html">Podcast Production</a></li>
+          <li><a href="services.html">Live Band Sessions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          13 Tremont Street<br />
+          Boston, MA 02108<br /><br />
+          (617) 555-0113<br />
+          info@studiothirteen.com
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year">2025</span> Studio Thirteen. All rights reserved. | Nnamdi</p>
+      <p>Boston, MA</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="js/nav.js"></script>
+  <script src="js/site.js"></script>
+
+  <!-- ===================== JS: auto-capitalize + submit handling ===================== -->
+  <script>
+    // Auto-capitalize the first letter of name/city fields as the visitor types.
+    // This is a formatting convenience only — actual field VALIDATION is handled
+    // entirely by native HTML5 attributes (required, pattern, type, minlength/maxlength).
+    ['first-name', 'last-name', 'city'].forEach(function (id) {
+      var field = document.getElementById(id);
+      field.addEventListener('input', function (e) {
+        var val = e.target.value;
+        if (val.length > 0) {
+          e.target.value = val.charAt(0).toUpperCase() + val.slice(1);
+        }
+      });
+    });
+
+    // Set the minimum selectable date on the date picker to today.
+    var prefDate = document.getElementById('pref-date');
+    var today = new Date().toISOString().split('T')[0];
+    prefDate.setAttribute('min', today);
+
+    // Native HTML5 validation runs automatically on submit. If everything
+    // is valid, we intercept just to show a friendly confirmation message
+    // in place of the form (no backend is wired up for this class project).
+    var form = document.getElementById('contact-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.checkValidity()) {
+        form.style.display = 'none';
+        document.getElementById('form-success').classList.add('visible');
+      } else {
+        form.reportValidity();
+      }
+    });
+  </script>
+
+</body>
+</html>
